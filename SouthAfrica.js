@@ -141,7 +141,7 @@ d3.json("SouthAfrica.json").then(function (topology) {
                     var areaPercentage = areaDict[region] / 100       //Turn into percentage. 30 -> 0.3
                     var density = areaPercentage * totalAverageUrbanPopulation_2015_2018
                     console.log("Density " + density)
-                    var densityRGB = 350 - density / 25555            //The numbers are too large. I need to divide them into a number less than 255. Anything larger results in just black. 255 subtracting densityRGB flips the colors so that a higher density results in a darker color
+                    var densityRGB = 260 - density / 25555            //The numbers are too large. I need to divide them into a number less than 255. Anything larger results in just black. 255 subtracting densityRGB flips the colors so that a higher density results in a darker color
                     console.log("Density RGB: "  + densityRGB)
 
                     /*
@@ -184,7 +184,7 @@ d3.json("SouthAfrica.json").then(function (topology) {
         console.log(error)
     })
 
-
+    //Returns a string format featuring RGB
     function rgb(r, g, b){
         return "rgb("+r+","+g+","+b+")";
     }
